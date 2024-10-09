@@ -1,7 +1,8 @@
 const db = require("../../db/connection");
 const seed = require("../../db/seed");
+const testData = require("../../db/data"); 
 
-beforeAll(() => seed());
+beforeAll(() => seed(testData)); 
 afterAll(() => db.end());
 
 describe("seed", () => {

@@ -1,7 +1,6 @@
 const db = require("./connection");
 const format = require("pg-format");
 const { prepareRides } = require("./utils.js");
-
 function seed({parks, rides, stalls}) {
   return db
     .query("DROP TABLE IF EXISTS rides;")
